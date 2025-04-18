@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.container header.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 250px;
+}
+
+.container header.main_header nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  align-items: center;
+}
+
+.container header.main_header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #363636;
+}
