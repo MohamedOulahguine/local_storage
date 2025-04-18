@@ -40,9 +40,6 @@
         </nav>
       </header>
       <main>
-        <div class="localStorage_logo">
-          <i class="fa-solid fa-database"></i>
-        </div>
         <div class="content">
           <h1>" what is localStorage <i class="fa-solid fa-database"></i> "</h1>
           <p>
@@ -71,26 +68,34 @@
         </div>
         <div class="settings">
           <h1>settings 🙈</h1>
+          <span class="active">default</span>
           <div class="stgs">
             <div class="font_color">
               <h3>choose color:</h3>
               <ul>
-                <li>red</li>
-                <li>green</li>
-                <li>blue</li>
-                <li>yellow</li>
+                <li value="#d32243">red</li>
+                <li value="#22d399">green</li>
+                <li value="#222cd3">blue</li>
+                <li value="#d32f22">orange</li>
               </ul>
             </div>
             <div class="font_size">
               <h3>choose size:</h3>
               <ul>
+                <li>13px</li>
                 <li>15px</li>
+                <li>18px</li>
                 <li>20px</li>
-                <li>25px</li>
-                <li>30px</li>
               </ul>
             </div>
           </div>
+        </div>
+        <div class="to_do_list">
+          <div class="todo_input">
+            <input type="text" placeholder="type in your todo to add 🤔" />
+            <button class="add_to_output">add 🌚</button>
+          </div>
+          <div class="todo_output"><span>nothing to show 🙈 ...</span></div>
         </div>
       </main>
     </div>

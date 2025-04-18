@@ -10,6 +10,7 @@ body {
   padding: 0;
   text-transform: capitalize;
   list-style: none;
+  font-weight: 600;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 250px;
+  padding: 15px 100px;
 }
 
 .container header.main_header nav ul {
@@ -38,19 +39,15 @@ body {
 }
 
 .container main {
-  justify-content: center;
   display: flex;
-  gap: 50px;
-  height: 100%;
-}
-
-.container main .localStorage_logo {
-  font-size: 150px;
-  color: #363636;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .container main .content,
-.container main .settings {
+.container main .settings,
+.container main .to_do_list {
   background-color: #c7c7c77a;
   width: 500px;
   height: 300px;
@@ -82,6 +79,11 @@ body {
   margin: 20px;
 }
 
+.container main .settings span {
+  padding: 5px 15px;
+  position: relative;
+}
+
 .container main .settings .stgs {
   display: flex;
   justify-content: center;
@@ -94,22 +96,24 @@ body {
   cursor: pointer;
 }
 
-.container main .settings .stgs div ul li::before {
+.container main .settings .stgs div ul li::before,
+.container main .settings span::before {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
   border: #363636 solid 2px;
   top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
+  right: -5px;
+  transform: translate(5px, -50%);
+  -webkit-transform: translate(5px, -50%);
+  -moz-transform: translate(5px, -50%);
+  -ms-transform: translate(5px, -50%);
+  -o-transform: translate(5px, -50%);
 }
 
-.container main .settings .stgs div ul li.active::after {
+.container main .settings .stgs div ul li.active::after,
+.container main .settings span.active::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -123,10 +127,101 @@ body {
   height: 15px;
   background-color: #31b94f;
   top: 50%;
-  right: 1.5%;
-  transform: translate(-1%, -50%);
-  -webkit-transform: translate(-1%, -50%);
-  -moz-transform: translate(-1%, -50%);
-  -ms-transform: translate(-1%, -50%);
-  -o-transform: translate(-1%, -50%);
+  right: -3px;
+  transform: translate(4.5px, -50%);
+  -webkit-transform: translate(4.5px, -50%);
+  -moz-transform: translate(4.5px, -50%);
+  -ms-transform: translate(4.5px, -50%);
+  -o-transform: translate(4.5px, -50%);
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+.container main .to_do_list {
+  overflow: hidden;
+}
+
+.container main .to_do_list .todo_input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container main .to_do_list .todo_input input {
+  width: 70%;
+  padding: 10px 5px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: solid 2px #363636;
+  outline: none;
+}
+
+.container main .to_do_list .todo_input .add_to_output {
+  width: 28%;
+  padding: 10px;
+  background-color: #363636;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  text-transform: uppercase;
+}
+.container main .todo_output {
+  padding: 15px 0;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.container main .todo_output::-webkit-scrollbar {
+  width: 8px;
+}
+.container main .todo_output::-webkit-scrollbar-thumb {
+  background-color: #363636;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.container main .todo_output::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+
+.container main .todo_output .todo {
+  display: flex;
+  background-color: #363636;
+  width: 98%;
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.container main .todo_output .btnToRemove {
+  background-color: #eaebea;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
 }
