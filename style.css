@@ -8,10 +8,13 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
+  list-style: none;
 }
 
 .container {
   width: 100%;
+  height: 100vh;
 }
 
 .container header.main_header {
@@ -24,7 +27,6 @@ body {
 .container header.main_header nav ul {
   display: flex;
   gap: 50px;
-  list-style: none;
   align-items: center;
 }
 
@@ -33,4 +35,98 @@ body {
   text-transform: uppercase;
   font-size: 25px;
   color: #363636;
+}
+
+.container main {
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+  height: 100%;
+}
+
+.container main .localStorage_logo {
+  font-size: 150px;
+  color: #363636;
+}
+
+.container main .content,
+.container main .settings {
+  background-color: #c7c7c77a;
+  width: 500px;
+  height: 300px;
+  padding: 15px;
+}
+
+.container main .content h1 {
+  padding: 5px;
+}
+
+.container main .content p {
+  padding: 5px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.container main .content .links {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 20px 25px;
+}
+
+.container main .content .links a {
+  color: #363636;
+}
+
+.container main .settings h1 {
+  margin: 20px;
+}
+
+.container main .settings .stgs {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.container main .settings .stgs div ul li {
+  margin: 15px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.container main .settings .stgs div ul li::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: #363636 solid 2px;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+
+.container main .settings .stgs div ul li.active::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #31b94f;
+  top: 50%;
+  right: 1.5%;
+  transform: translate(-1%, -50%);
+  -webkit-transform: translate(-1%, -50%);
+  -moz-transform: translate(-1%, -50%);
+  -ms-transform: translate(-1%, -50%);
+  -o-transform: translate(-1%, -50%);
 }
